@@ -1,0 +1,3 @@
+%{
+  "crontab": {:hex, :crontab, "1.1.9", "0cf8053611830bc5a7510ace6e846325b459d94f5325234435a4af7c654502bc", [:mix], [{:ecto, "~> 1.0 or ~> 2.0 or ~> 3.0", [hex: :ecto, repo: "hexpm", optional: true]}], "hexpm"},
+}
