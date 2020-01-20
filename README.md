@@ -1,4 +1,4 @@
-# Schedulex
+# ex_scheduler
 
 Cron-like job scheduler in less then 100 lines of readable elixir code.
 
@@ -9,7 +9,7 @@ Inspired in https://stackoverflow.com/a/32097971, but with cron syntax support.
 ```elixir
 def deps do
   [
-    {:schedulex, "~> 0.1.0"}
+    {:ex_scheduler, "~> 0.1.0"}
   ]
 end
 ```
@@ -19,7 +19,7 @@ end
 Cron expressions are evaluated over UTC time.
 
 ```elixir
-  config :schedulex, [
+  config :ex_scheduler, [
     %{
       # Every 5 minutes
       cron: "*/5 * * * *",

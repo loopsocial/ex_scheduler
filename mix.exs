@@ -1,9 +1,9 @@
-defmodule Schedulex.MixProject do
+defmodule ExScheduler.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :schedulex,
+      app: :ex_scheduler,
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule Schedulex.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Schedulex.Application, []}
+      mod: {ExScheduler.Application, []}
     ]
   end
 

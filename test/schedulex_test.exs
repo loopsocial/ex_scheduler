@@ -1,8 +1,8 @@
-defmodule SchedulexTest do
+defmodule ExSchedulerTest do
   use ExUnit.Case
-  doctest Schedulex
+  doctest ExScheduler
 
-  test "greets the world" do
-    assert Schedulex.hello() == :world
-  end
+  # test "greets the world" do
+  #   assert ExScheduler.hello() == :world
+  # end
 end
