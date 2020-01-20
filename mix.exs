@@ -22,7 +22,8 @@ defmodule ExScheduler.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:crontab, "~> 1.1"}
+      {:crontab, "~> 1.1"},
+      {:timex, "~> 3.4"}
     ]
   end
 end
