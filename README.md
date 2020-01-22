@@ -1,8 +1,12 @@
-# ex_scheduler
+# ExScheduler
 
-Cron-like job scheduler in less then 100 lines of readable elixir code.
+Cron-like job scheduler in few lines of readable elixir code.
 
-Inspired in https://stackoverflow.com/a/32097971, but with cron syntax support.
+Inspired in [this answer by José Valim](https://stackoverflow.com/a/32097971).
+
+Additions:
+- Cron syntax with extended support for seconds
+- Cluster support with each job running in only one node
 
 ## Installation
 
@@ -41,8 +45,6 @@ Cron expressions are evaluated over UTC time.
 - When `args` are ommited, the function is called with no attributes.
 
 ## TODO
-- get index of min value in one line (Worker.get_state/1)
-- single scheduler per cluster of nodes
 - https://hex.pm/docs/publish
 - Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
   and published on [HexDocs](https://hexdocs.pm)

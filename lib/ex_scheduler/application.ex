@@ -3,10 +3,7 @@ defmodule ExScheduler.Application do
   use Application
 
   def start(_type, _args) do
-    config = Application.get_env(:ex_scheduler, :jobs)
-
     children = [
-      {ExScheduler.Worker, config},
       {Task.Supervisor, name: ExScheduler.TaskSupervisor}
     ]
 
