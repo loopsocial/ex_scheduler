@@ -45,6 +45,8 @@ Cron expressions are evaluated over UTC time.
 - When `args` are ommited, the function is called with no attributes.
 
 ## TODO
+- Rewrite README configuration section with Application configuration
+- Write documentation for Worker
 - https://hex.pm/docs/publish
 - Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
   and published on [HexDocs](https://hexdocs.pm)

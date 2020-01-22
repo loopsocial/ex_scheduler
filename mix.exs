@@ -5,9 +5,12 @@ defmodule ExScheduler.MixProject do
     [
       app: :ex_scheduler,
       version: "0.1.0",
+      description: "Cron-like job scheduler in few lines of readable elixir code.",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      package: package(),
+      deps: deps(),
+      source_url: "https://github.com/loopsocial/ex_scheduler"
     ]
   end
 
@@ -25,5 +28,13 @@ defmodule ExScheduler.MixProject do
       {:crontab, "~> 1.1"},
       {:timex, "~> 3.4"}
     ]
+  end
+
+  defp package do
+    %{
+      licenses: ["Apache License 2.0"],
+      maintainers: ["Alexandre Marangoni Costa"],
+      links: %{"GitHub" => "https://github.com/loopsocial/ex_scheduler"}
+    }
   end
 end
