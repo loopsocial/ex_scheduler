@@ -21,25 +21,7 @@ end
 ## Configuration
 
 Cron expressions are evaluated over UTC time.
-
-```elixir
-  config :ex_scheduler, [
-    %{
-      # Every 5 minutes
-      cron: "*/5 * * * *",
-      module: Context.ModuleName,
-      function: :function_name, # optional
-      args: [1, 2, 3]           # optional
-    },
-    %{
-      # Every hour
-      cron: "0 * * * *",
-      module: "Context.ModuleName2",
-      function: :function_name, # optional
-      args: [:foo, :bar]        # optional
-    }
-  ]
-```
+WORK IN PROGRESS.
 
 - When `function_name` is omitted, the `perform/0` function is called.
 - When `args` are ommited, the function is called with no attributes.
