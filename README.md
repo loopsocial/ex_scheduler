@@ -20,14 +20,33 @@ end
 
 ## Configuration
 
+In application.ex, include Ex.Worker in your supervisiton tree
+```elixir
+  {ExScheduler.Worker, ex_scheduler_config()}
+```
+
+Write the configuration
+```elixir
+  defp ex_scheduler_config() do
+    [
+      # runs `Foo.Bar.perform/0` every second
+      %{cron: "* * * * * *", module: Foo.Bar},
+      # runs `Foo.Bar.custom/0` every 5 minutes
+      %{cron: "* */5 * * * *", module: Foo.Bar, function: :custom},
+      # runs `IO.puts/1` with "hello world" every day at 1:30
+      %{cron: "0 30 1 * * *", module: IO, function: :puts, args: ["hello world"]},
+    ]
+  end
+```
+
 Cron expressions are evaluated over UTC time.
-WORK IN PROGRESS.
 
 - When `function_name` is omitted, the `perform/0` function is called.
 - When `args` are ommited, the function is called with no attributes.
+- It uses a cron (extended syntax)[https://hexdocs.pm/crontab/Crontab.CronExpression.Parser.html#parse/2],
+where the first `*` represents the seconds
 
 ## TODO
-- Rewrite README configuration section with Application configuration
 - Write documentation for Worker
 - https://hex.pm/docs/publish
 - Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
